@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Audio Visualiser with JavaScript</title>
+</head>
+<body class="body__background">
+    <div class="body__border left"></div>
+    <div class="body__border right"></div>
+    <div class="body__border top"></div>
+    <div class="body__border bottom"></div>
+    <div class="audio__line">
+        <div class="audio__time">
+            <div class="time__current">0</div>
+            <div class="time__duration">00</div>
+        </div>
+        <input class="audioLineControl" type="range" max="1" min="0" step="0.01">
+        <div class="duration__line"></div>
+    </div>
+    <audio src="music.mp3" id="audio" preload="metadata"></audio>
+    <div class="logo">
+        <div id="logo"></div>
+        <div class="logo__item"></div>
+    </div>
+    <div class="controls">
+        <div class="play control__item">
+            <img src="img/playImg.svg" alt="play">
+            <img src="img/pause.svg" alt="pause">
+        </div>
+        <div class="control__item volume__control">
+            <div class="volume__line"></div>
+            <input class="volumeControl" type="range" max="1" min="0" step="0.01" value="1">
+        </div>
+    </div>
+    <div class="show__controls">
+        <img src="img/arrow.svg" alt="">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
