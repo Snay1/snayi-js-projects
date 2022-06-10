@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from 'react';
+import React, {useState} from 'react';
 import './Game.css';
 import Board from './Board';
 import StartNewGame from './StartNewGame';
@@ -78,9 +78,9 @@ export default function Game() {
   return (
     <div className='wrapper'>
 
-      {winner ?  <h1 className='winner'>Победитель: {winner} </h1> :  draw == board.length ? <h1 className='winner'>Ничья</h1> : <h3 className='player'>Сейчас ходит: {xIsNext ? 'X' : 'O'}</h3>}
+      {winner ?  <h1 className='winner'>Победитель: {winner} </h1> :  draw === board.length ? <h1 className='winner'>Ничья</h1> : <h3 className='player'>Сейчас ходит: {xIsNext ? 'X' : 'O'}</h3>}
       <Board gameEnd={gameEnd} setGameEnd={setGameEnd} squares={board} click={handleClick} winArray={winArray} setWinner={setWinner} winSquare={winSquare}/>
-      {winner ? win() : draw == board.length ? win() : ''}
+      {winner ? win() : draw === board.length ? win() : ''}
     </div>
   )
 }
