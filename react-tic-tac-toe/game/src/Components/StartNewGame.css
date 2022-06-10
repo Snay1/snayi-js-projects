@@ -1,0 +1,21 @@
+.newGame {
+    padding: 12px 16px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 30px;
+    transition: all ease 1s;
+    cursor: pointer;
+}
+
+.newGame:hover {
+    background-color: #fff;
+    color: #222;
+}
+
+
+@media (max-width: 600px) {
+    .newGame {
+        font-size: 24px;
+    }
+}
